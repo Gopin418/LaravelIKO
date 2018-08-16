@@ -1,0 +1,410 @@
+
+.jsa{
+  background-color: #84a6f3;
+}
+.adl{
+  background-color: #92f084;
+}
+
+textarea{
+    resize: none !important;
+
+}
+
+
+
+.next:hover{
+  cursor: pointer;
+}
+
+
+.center{
+    text-align: center;
+}
+
+.active{
+    color: black;
+    background-color: #fff;
+}
+
+.box{
+  z-index: -1; 
+  background-color: #fff;
+  margin-top: 30%;
+  padding: 0;
+  box-shadow: #1e1e1e 0px 1px 3px ;
+  min-height: 510px;  
+}
+
+.table > thead > tr > th {
+  vertical-align: middle;
+}
+
+
+.jsabox{
+  z-index: -1; 
+  background-color: #fff;
+  margin: 0;
+  margin-top:15%;
+  margin-bottom:15%;
+  padding: 0;
+  box-shadow: #1e1e1e 0px 1px 3px ;
+  min-height: 510px;  
+}
+
+@media only screen and (max-width: 1366px) {
+  .ikobox{
+    z-index: -1;
+    background-color: #fff;
+    margin-top: 35%;
+    padding: 0;
+    padding-bottom: 10px;
+    box-shadow: #1e1e1e 0 1 3;
+    height: auto;
+    margin-bottom: 10%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .ikobox{
+    z-index: -1;
+    background-color: #fff;
+    padding: 0;
+    padding-bottom: 10px;
+    box-shadow: #1e1e1e 0 1 3;
+    height: auto;
+    margin-bottom: 10%;
+  }
+}
+.ipb-box{
+  z-index: -1;
+  background-color: #fff;
+  margin-top: 35%;
+  padding: 0;
+  padding-bottom: 15px;
+  box-shadow: #1e1e1e 0 1 3;
+  height: auto;
+  margin-bottom: 30%;
+}
+.jsaback{ 
+  background-color: #3867d6;
+  height: 300px;
+}
+.adlback{
+  background-color: #4cd137;
+  height: 300px;
+}
+
+/* IPB */
+.ipb-back {
+  background-color: #d63031;
+  height: 300px;
+}
+
+.mer{
+  background: #d63031 !important;
+}
+.ipb{
+  background-color: #fab1a0;
+}
+.merah{
+  background-color: #fab1a0;
+  height: 10px;
+  position: relative;
+  top: 0;
+}
+
+.ipb-form{
+  z-index: -1;
+  background-color: #fff;
+  margin-top: 20%;
+  padding: 0;
+  padding-bottom: 15px;
+  box-shadow: #1e1e1e 0 1 3;
+  height: auto;
+  margin-bottom: 30%;
+}
+
+/* /IPB */
+
+
+/* IKO */
+
+.iko-back{
+  background-color: #f7b731;
+  height: 300px;
+}
+
+.iko{
+  background-color: #ffea9d;
+}
+
+.kuning {
+  background-color: #ffea9d;
+  height: 10px;
+  position: relative;
+  top: 0;
+}
+/* /IKO */
+
+input[type="date"]{
+  cursor: pointer;
+}
+
+.form{
+  padding: 25px;
+  padding-bottom: 0;
+}
+.hijau{
+  background-color: #44bd32;
+  height: 10px;
+  position: relative;
+  top: 0;
+}
+
+.biru{
+  background-color: #84a6f3;
+  height: 10px;
+  position: relative;
+  top: 0;
+}
+
+/* Radio Button */
+
+
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+input[type="radio"]+label, input[type="checkbox"]+label {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 10px;
+  line-height: 36px;
+  cursor: pointer;
+  z-index: 0;
+}
+input[type="radio"]+label::before, input[type="checkbox"]+label::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+}
+
+div.mer input[type="checkbox"]+label::before {
+  border: 2px solid #d63031;
+}
+
+div.kun input[type="checkbox"]+label::before {
+  border: 2px solid #f7b731;
+}
+
+div.jau input[type="checkbox"]+label::before {
+  border: 2px solid #4cd137;
+}
+
+div.kun input[type="radio"]+label::before {
+  border: 2px solid #f7b731;
+}
+
+input[type="radio"] + label::before {
+  border-radius: 18px;
+}
+/* Checked */
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  padding-left: 10px;
+  color: #fff;
+}
+input[type="checkbox"]:checked + label::before,
+input[type="radio"]:checked + label::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #007bff;
+  z-index:-1;
+}
+
+div.mer{
+  background-color: transparent !important;
+}
+
+div.jau input[type="checkbox"]:checked + label::before{
+  background: #4cd137 !important;
+  border: #4cd137 !important;
+}
+
+div.mer input[type="checkbox"]:checked + label::before{
+  background: #d63031 !important;
+  border: #d63031 !important;
+}
+
+div.kun input[type="checkbox"]:checked + label::before {
+  background: #f7b731 !important;
+  border: #f7b731 !important;
+}
+
+div.kun input[type="radio"]:checked + label::before{
+  background: #f7b731 !important;
+  border: #f7b731 !important;
+}
+
+div.kun .form-control:focus{
+  border-color: #f7b731;
+  box-shadow: 0 0 0 0.2rem rgba(247, 183, 49, 0.5);
+}
+
+/* Transition */
+label,
+label::before {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+
+/* Radio Button */
+
+
+.hijau{
+  background-color: #9df19d;
+  height:10px;
+  position: relative;
+  top:0;
+}
+
+.table-no-border td, .table-no-border th{
+  border:none;
+}
+.table-no-margin tr , .table-no-margin td{
+  margin:0 !important;
+  padding:0 !important;
+}
+
+.no-margin {
+  margin: 0% !important;
+}
+
+.table-margin tr, .table-margin td {
+  margin-bottom:1rem !important;
+  padding: 0.75rem !important;
+}
+
+
+
+.menuB{
+background-color: #1e1e1e;
+padding-left : 10px;
+padding-right: 10px;
+height: 30px;
+position : absolute;
+z-index: 2;
+}
+
+.sidebar{
+    position: absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    background-color: #1e1e1e;
+    z-index: 0;
+    padding-top: 40px;
+    padding-left: 10px;
+    width : 250px;
+    color: white;
+}
+
+
+/* Radio Buttton kedua */
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 50px;
+    width: 50px;
+    margin-left: -5px;
+    margin-top: -5px;
+    opacity: 0;
+  }
+}
+
+div.ipb-forms input[type="radio"] {
+  opacity: 1;
+}
+
+div.ipb-forms .option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+div.ipb-forms .option-input:hover {
+  background: #fab1a0;
+}
+div.ipb-forms .option-input:checked {
+  background: #d63031;
+}
+div.ipb-forms label{
+  margin:0;
+  padding:0;
+}
+div.ipb-forms .option-input:checked::before {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  font-family: FontAwesome;
+  content: "\f00c";
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 40px;
+}
+
+
+div.ipb-forms .option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #d63031;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+div.ipb-forms .option-input.radio {
+  border-radius: 50%;
+}
+div.ipb-forms .option-input.radio::after {
+  border-radius: 50%;
+}
+/* Radio Button Kedua */
