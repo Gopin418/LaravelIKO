@@ -7,10 +7,18 @@
 
 ## About IKO
 
-Aplikasi ini dibangun diatas Framework Laravel dan Bootstrap
+Aplikasi ini dibangun diatas Framework Laravel 5.6 dan Bootstrap 4
 
 - Admin Dashboard dengan 3 2 Role user
 - Form IKO yang dinamis
 - Nested Fields
 - Simple Design
 - Clean Code
+
+## Bahasa yang Digunakan
+
+Bahasa pemrograman yang digunakan untuk web ini berupa :
+- PHP
+- HTML
+- CSS
+- jQuery
