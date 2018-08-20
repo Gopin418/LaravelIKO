@@ -9,7 +9,7 @@
 
 Aplikasi ini dibangun diatas Framework Laravel 5.6 dan Bootstrap 4
 
-- Admin Dashboard dengan 3 2 Role user
+- Admin Dashboard dengan 2 Role user
 - Form IKO yang dinamis
 - Nested Fields
 - Simple Design
@@ -22,3 +22,11 @@ Bahasa pemrograman yang digunakan untuk web ini berupa :
 - HTML
 - CSS
 - jQuery
+
+## Getting Started
+
+Untuk memulai, pastikan server terinstal PHP 7.1 keatas.
+
+lakukan migrasi database yang telah disediakan.
+
+lakukan seeding untuk table.
