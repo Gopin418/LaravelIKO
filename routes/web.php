@@ -59,12 +59,11 @@ Route::prefix('admin')->group(function () {
       Route::get('/', 'UtilityController@index');
 
       //post utility
-      Route::post('/air', 'UtilityController@storeAir');
-      Route::post('/angin', 'UtilityController@storeAngin');
-      Route::post('/listrik', 'UtilityController@storeListrik');
-      Route::post('/steam', 'UtilityController@storeSteam');
+      Route::put('/air/{id}', 'UtilityController@updateAir');
+      Route::put('/angin/{id}', 'UtilityController@updateAngin');
+      Route::put('/listrik/{id}', 'UtilityController@updateListrik');
+      Route::put('/steam/{id}', 'UtilityController@updateSteam');
     });
-    Route::get('/calendar', 'CalendarController@index');
     //Admin list
     Route::get('/list', 'Admin@index');
     Route::put('/list/{id}', 'Admin@update');
@@ -99,6 +98,14 @@ Route::prefix('admin')->group(function () {
         Route::put('/pending/{id}', 'ADLController@update');
 
         Route::get('/approved', 'ADLController@approved');
+    });
+
+    Route::prefix('IPB')->group(function() {
+
+      Route::get('/pending', 'IPBController@pending');
+      Route::put('/pending/{id}', 'IPBController@update');
+
+      Route::get('/approved', 'IPBController@approved');
     });
 
 });

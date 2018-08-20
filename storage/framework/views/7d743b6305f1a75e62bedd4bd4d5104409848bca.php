@@ -23,7 +23,8 @@ IKO
 <?php endif; ?>
 <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $datas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 <form action="/admin/IKO/pending/<?php echo e($datas->id); ?>" method="post">
-    <tr>        <td><?php echo e($datas->nama_kontraktor); ?></td>
+    <tr>
+        <td><?php echo e($datas->nama_kontraktor); ?></td>
         <td><?php echo e($datas->nama_pekerjaan); ?></td>
         <td><?php echo e($datas->jenis); ?></td>
         <td><?php echo e('Nutrifood ' . $datas->lokasi . ', ' . $datas->area); ?></td>

@@ -10,8 +10,7 @@ class desc_project extends Model
 
     protected $table = "desc_project";
 
-    protected $fillable = [
-        'deskripsi',
-        'lokasi'
-    ];
+    [public function IKO() {
+      return $this->belongsTo(IKO::class);
+    }]
 }

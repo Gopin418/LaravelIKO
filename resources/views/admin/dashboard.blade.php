@@ -49,7 +49,7 @@ Dashboard Admin
         <div class="small-box bg-green">
             <div class="inner">
                 <h3>{{ $jumlahADL }}</h3>
-                
+
                 <p>{{ $ADL_pending . ' Pending, ' . $ADL_approved . ' Approved'}}</p>
             </div>
             <div class="icon">
@@ -86,7 +86,7 @@ Dashboard Admin
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">On-going</h3>
+                <h3 class="box-title">On-going Project / Maintenance</h3>
             </div>
             {{-- /.box-header --}}
             @if( $ongoingStatus == 0 )
@@ -126,6 +126,21 @@ Dashboard Admin
             @endif
         </div>
     </div>
+</div>
+
+{{-- upcoming Project --}}
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box">
+      <div class="box-header">
+        <h3>Finished Project / Maintenance</h3>
+      </div>
+      @if($upcomingStatus == 0)
+        <div class="box-body">
+          <p>&nbsp;Tidak ada Pekerjaan Kontraktor yang akan datang</p>
+        </div>
+    </div>
+  </div>
 </div>
 
 @endsection

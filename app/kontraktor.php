@@ -19,8 +19,8 @@ class kontraktor extends Model
         'telp_pj_lapangan'
     ];
 
-    public function pengantar() {
-        return $this->belongsTo('App\pengantar');
+    public function IKO(){
+      return $this->belongsTo(IKO::class);
     }
 
 }

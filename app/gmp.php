@@ -14,13 +14,7 @@ class gmp extends Model
         'brg_yang_disimpan' => 'array',
     ];
 
-    protected $fillable = [
-        'area_gmp',
-        'brg_yang_disimpan',
-        'lokasi_gudang'
-    ];
-
-    public function pengantar () {
-        return $this->belongsTo('App\Pengantar');
+    public function IKO(){
+      return $this->belongsTo(IKO::class);
     }
 }

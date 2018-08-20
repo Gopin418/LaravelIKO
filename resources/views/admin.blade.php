@@ -86,6 +86,8 @@
 
 <!-- jQuery 3 -->
 <script src="/js/jquery.js"></script>
+{{-- Bootstrap JS --}}
+<script src="/js/bootstrap.min.js" charset="utf-8"></script>
 <!-- FastClick -->
 <script src="/js/fastclick.js"></script>
 <!-- AdminLTE App -->
@@ -96,12 +98,7 @@
 <script src="/js/select2.full.min.js"></script>
 <script>
 
-var date = new Date(Date.UTC({{ $currentTime['hours'] . ',' . $currentTime['minutes'] . ',' . $currentTime['seconds']}}));
 
-setInterval(function() {
-  date.setSeconds(date.getSeconds() + 1);
-  console.log((date.getHours() + ':' + date.getMinutes() + date.getSeconds() ));
-}, 1000);
 
 window.addEventListener('load', function() {
   new FastClick(document.body);

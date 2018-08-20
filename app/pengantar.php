@@ -12,21 +12,8 @@ class pengantar extends Model
 
     protected $table = "pengantar";
 
-    protected $fillable = [
-        'nama_pekerjaan',
-        'jenis_pekerjaan',
-        'tanggal_mulai',
-        'tgl_mulai',
-        'tanggal_selesai',
-        'tgl_selesai'
-    ];
-
-    public function kontraktor() {
-        return $this->belongsTo('App\kontraktor', 'pengantar', 'id');
+    public function iko() {
+      return $this->belongsTo(IKO::class);
     }
 
-    public function emergency() {
-        return $this->belongsTo('App\emergency', 'emergency', 'id');
-    }
-    
 }

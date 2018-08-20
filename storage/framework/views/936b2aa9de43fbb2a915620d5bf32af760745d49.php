@@ -183,25 +183,7 @@
           <i class="fa fa-flash"></i> Approval Utility
         </a>
       </li>
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-envelope"></i><span>Mailbox</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li>
-            <a href="#"><i class="fa fa-inbox"></i> Inbox</a>
-          </li>
-          <li>
-            <a href="#"><span class="fa fa-pencil-square-o"></span> Compose</a>
-          </li>
-          <li>
-            <a href="#"><span class="fa fa-envelope-o"></span> Sent</a>
-          </li>
-        </ul>
-      </li>
+    
       
       <li class="header">
         User Navigation
@@ -234,6 +216,6 @@
         <a href="/admin/list"><i class="fa fa-users"></i> Users</a>
       </li>
       <?php endif; ?>
-    
+
     </ul>
   </section>

@@ -10,9 +10,7 @@ class nutrifood extends Model
 
     protected $table = "nutrifood";
 
-    protected $fillable = [
-        'id_project',
-        'pj_project',
-        'no_telp'
-    ];
+    public function IKO() {
+      return $this->belongsTo(IKO::class);
+    }
 }

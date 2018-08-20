@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 //Library
 use Illuminate\Support\Facades\DB;
-
+use Carbon\Carbon;
 //Model
 use App\pengantar;
 use App\catatan;
@@ -42,6 +42,44 @@ class AdminController extends Controller
     {
         $currentTime = getdate();
 
+        $finish = DB::table('pengantar')
+        ->join('kontraktor', 'pengantar.id', '=', 'kontraktor.id')
+        ->join('emergency', 'pengantar.id', '=', 'emergency.id')
+        ->join('desc_project', 'pengantar.id', '=', 'desc_project.id')
+        ->join('gmp', 'pengantar.id', '=', 'gmp.id')
+        ->join('catatan', 'pengantar.id', '=', 'catatan.id')
+        ->join('nutrifood', 'pengantar.id', '=', 'nutrifood.id')
+        ->join('adl_status', 'pengantar.id', '=', 'adl_status.id')
+        ->join('jsa_status', 'pengantar.id', '=', 'jsa_status.id')
+        ->join('iko_status', 'pengantar.id', '=', 'iko_status.id')
+        ->where([
+          ['adl_status.status', 'Approved'],
+          ['jsa_status.status', 'Approved'],
+          ['iko_status.status', 'Approved'],
+          ['tanggal_selesai', '<=', now()->toDateString()]
+        ])
+        ->orderBy('pengantar.id')
+        ->paginate(2);
+
+        $upcoming = DB::table('pengantar')
+        ->join('kontraktor', 'pengantar.id', '=', 'kontraktor.id')
+        ->join('emergency', 'pengantar.id', '=', 'emergency.id')
+        ->join('desc_project', 'pengantar.id', '=', 'desc_project.id')
+        ->join('gmp', 'pengantar.id', '=', 'gmp.id')
+        ->join('catatan', 'pengantar.id', '=', 'catatan.id')
+        ->join('nutrifood', 'pengantar.id', '=', 'nutrifood.id')
+        ->join('adl_status', 'pengantar.id', '=', 'adl_status.id')
+        ->join('jsa_status', 'pengantar.id', '=', 'jsa_status.id')
+        ->join('iko_status', 'pengantar.id', '=', 'iko_status.id')
+        ->where([
+          ['adl_status.status', 'Approved'],
+          ['jsa_status.status', 'Approved'],
+          ['iko_status.status', 'Approved'],
+          ['tanggal_mulai', '>=', now()->toDateString()]
+        ])
+        ->orderBy('pengantar.id')
+        ->paginate(2);
+
         // Ongoing Data
         $ongoing = DB::table('pengantar')
         ->join('kontraktor','pengantar.id', '=', 'kontraktor.id')
@@ -77,6 +115,31 @@ class AdminController extends Controller
         ])
         ->count();
 
+        $finishStatus = DB::table('pengantar')
+        ->join('adl_status', 'pengantar.id', '=', 'adl_status.id')
+        ->join('jsa_status', 'pengantar.id', '=', 'jsa_status.id')
+        ->join('iko_status', 'pengantar.id', '=', 'iko_status.id')
+        ->where([
+          ['adl_status.status', 'Approved'],
+          ['jsa_status.status', 'Approved'],
+          ['iko_status.status', 'Approved'],
+          ['tanggal_selesai', '<=', now()->toDateString()]
+        ])
+        ->count();
+
+        $now = Carbon::now()->format('m');
+
+        $upcomingStatus = DB::table('pengantar')
+        ->join('adl_status', 'pengantar.id', '=', 'adl_status.id')
+        ->join('jsa_status', 'pengantar.id', '=', 'jsa_status.id')
+        ->join('iko_status', 'pengantar.id', '=', 'iko_status.id')
+        ->where([
+          ['adl_status.status', 'Approved'],
+          ['jsa_status.status', 'Approved'],
+          ['iko_status.status', 'Approved']
+        ])
+        ->count();
+
         // label approved
         $IKO_approved = IKO_Status::where('status', 'Approved')->count();
         $JSA_approved = JSA_Status::where('status', 'Approved')->count();
@@ -102,13 +165,16 @@ class AdminController extends Controller
 
 
         return view('admin/dashboard', [
-            'currentTime' => $currentTime,
+            'upcoming' => $upcoming,
+            '$upcomingStatus' => $upcomingStatus,
+            'finish' => $finish,
+            'finishStatus' => $finishStatus,
+            'ongoing' =>$ongoing,
             'ongoingStatus' => $ongoingStatus,
             'IKO_approved' => $IKO_approved,
             'JSA_approved' => $JSA_approved,
             'ADL_approved' => $ADL_approved,
             'IPB_approved' => $IPB_approved,
-            'ongoing' =>$ongoing,
             'IKO_pending' => $IKO_pending,
             'JSA_pending' => $JSA_pending,
             'ADL_pending' => $ADL_pending,

@@ -25,7 +25,8 @@ IKO
 @endif
 @foreach($data as $datas)
 <form action="/admin/IKO/pending/{{ $datas->id }}" method="post">
-    <tr>        <td>{{ $datas->nama_kontraktor }}</td>
+    <tr>
+        <td>{{ $datas->nama_kontraktor }}</td>
         <td>{{ $datas->nama_pekerjaan }}</td>
         <td>{{ $datas->jenis }}</td>
         <td>{{ 'Nutrifood ' . $datas->lokasi . ', ' . $datas->area }}</td>

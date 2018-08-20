@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- jQuerry -->
+    
+    <script src="/js/jquery.js"></script>
+    
+    <script src="/js/bootstrap.bundle.js"></script>
+
+    
     <link rel="stylesheet" href="/css/bootstrap.css">
-
-
     <!-- css -->
     <link rel="stylesheet" href="/css/font-awesome.css">
     <link rel="stylesheet" href="/css/master.css">
@@ -58,14 +61,19 @@
 
 
                                                             
-                                                            <div class="input-group mt-4 kun">
-                                                                <input type="text" name="nama_pekerjaan" id="nama_project" class="form-control form-control-md" placeholder="Nama Project" autofocus>
+                                                            <div class="input-group mt-4 kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Masukkan Nama Pekerjaan">
+                                                                <input type="text" name="nama_pekerjaan" id="nama_project"
+                                                                  data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Masukkan Nama Pekerjaan"
+                                                                  class="form-control form-control-md" placeholder="Nama Project">
                                                                 <div class="help-block with-errors"></div>
                                                             </div>
                                                             
 
                                                             
-                                                            <div class="mt-4 kun">
+                                                            <div class="mt-4 kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Pilih Jenis Pekerjaan"
+                                                            >
                                                                 <input type="radio" name="jenis" id="project" value="Project">
                                                                 <label for="project">Project</label>
                                                                     <br>
@@ -76,14 +84,20 @@
 
                                                             
                                                             <div class="mt-4 kun">
-                                                                <div class="form-group">
+                                                                <div class="form-group"
+                                                                data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Pilih Tanggal Mulai">
                                                                     <input type="hidden" name="tanggal_mulai" id="tgl_mulai">
-                                                                    <input type="text" name="tgl_mulai" id="tanggal_mulai" class="form-control" placeholder="Tanggal Mulai" class="ui-datepicker" style="cursor: pointer;background-color: #fff; color: transparent; text-shadow: 0 0 0 #495057; &:focus{outline:none;}" readonly>
+                                                                    <input type="text" name="tgl_mulai" id="tanggal_mulai" class="form-control"
+                                                                    data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Pilih Tanggal Mulai"
+                                                                    placeholder="Tanggal Mulai" class="ui-datepicker" style="cursor: pointer;background-color: #fff; color: transparent; text-shadow: 0 0 0 #495057; &:focus{outline:none;}" readonly>
                                                                 </div>
 
-                                                                <div class="form-group">
+                                                                <div class="form-group"
+                                                                data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Pilih Tanggal Selesai">
                                                                     <input type="hidden" name="tanggal_selesai" id="tgl_selesai">
-                                                                    <input type="text" name="tgl_selesai" id="tanggal_selesai" class="form-control" placeholder="Tanggal Selesai" class="ui-datepicker" style="cursor: pointer;background-color: #fff; color: transparent; text-shadow: 0 0 0 #495057; &:focus{outline:none;}" readonly>
+                                                                    <input type="text" name="tgl_selesai" id="tanggal_selesai" class="form-control"
+                                                                    data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Pilih Tanggal Selesai"
+                                                                    placeholder="Tanggal Selesai" class="ui-datepicker" style="cursor: pointer;background-color: #fff; color: transparent; text-shadow: 0 0 0 #495057; &:focus{outline:none;}" readonly>
                                                                 </div>
                                                             </div>
                                                             
@@ -138,28 +152,45 @@
 
 
                                                             <!-- Nama Kontraktor -->
-                                                            <div class="form-group mt-4 kun">
-                                                                <input type="text" name="nama_kontraktor" id="nama_kontraktor" class="form-control input-md" placeholder="Nama Kontraktor" autofocus>
+                                                            <div class="form-group mt-4 kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Masukkan Nama Kontraktor">
+                                                                <input type="text" name="nama_kontraktor" id="nama_kontraktor" class="form-control input-md"
+                                                                data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Masukkan Nama Kontraktor"
+                                                                placeholder="Nama Kontraktor" autofocus>
+                                                            </div>
+
+                                                            <div class="form-group kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Masukkan email Kontraktor">
+                                                              <input type="email" class="form-control input-md" id="email_kontraktor" placeholder="Email Kontraktor"
+                                                              data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Harap Masukkan email valid dan aktif untuk menerima hasil">
                                                             </div>
 
                                                             <!-- Penanggung Jawab Kontraktor -->
-                                                            <div class="form-group kun">
-                                                                <input type="text" name="pj_kontraktor" id="pj_kontraktor" class="form-control input-md" placeholder="Penanggung Jawab Kontraktor">
+                                                            <div class="form-group kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Masukkan Nama Penanggung Jawab Kontraktor">
+                                                                <input type="text" name="pj_kontraktor" id="pj_kontraktor" class="form-control input-md" placeholder="Penanggung Jawab Kontraktor"
+                                                                data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Masukkan Nama Penanggung Jawab Kontraktor">
                                                             </div>
 
                                                             <!-- No. Telp. Penanggung Jawab Kontraktor -->
-                                                            <div class="form-group kun">
-                                                                <input type="tel" name="telp_pj_kontraktor" id="telp_pj_kontraktor" class="form-control input-md" placeholder="No. Telp. Penanggung Jawab Kontraktor">
+                                                            <div class="form-group kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Masukkan Nomor Telepon Penanggung Jawab Kontraktor yang dapat dihubungi">
+                                                                <input type="tel" name="telp_pj_kontraktor" id="telp_pj_kontraktor" class="form-control input-md" placeholder="No. Telp. Penanggung Jawab Kontraktor"
+                                                                data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Masukkan Nomor Telepon Penanggung Jawab Kontraktor yang dapat dihubungi">
                                                             </div>
 
                                                             <!-- Penanggung Jawab Lapangan -->
-                                                            <div class="form-group kun">
-                                                                <input type="text" name="pj_lapangan" id="pj_lapangan" class="form-control input-md" placeholder="Penanggung Jawab Lapangan">
+                                                            <div class="form-group kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Masukkan Nama Penanggung Jawab Lapangan">
+                                                                <input type="text" name="pj_lapangan" id="pj_lapangan" class="form-control input-md" placeholder="Penanggung Jawab Lapangan"
+                                                                data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Masukkan Nama Penanggung Jawab Lapangan">
                                                             </div>
 
                                                             <!-- No. Telp. Penanggung Jawab Lapangan -->
-                                                            <div class="form-group kun">
-                                                                <input type="tel" name="telp_pj_lapangan" id="telp_pj_lapangan" class="form-control input-md" placeholder="No. Telp Penanggung Jawab Lapangan">
+                                                            <div class="form-group kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Masukkan Nomor Telepon Penanggung Jawab Lapangan yang dapat dihubungi">
+                                                                <input type="tel" name="telp_pj_lapangan" id="telp_pj_lapangan" class="form-control input-md" placeholder="No. Telp Penanggung Jawab Lapangan"
+                                                                data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Masukkan Nomor Telepon Penanggung Jawab Lapangan yang dapat dihubungi">
                                                             </div>
 
                                                             
@@ -204,14 +235,18 @@
                                                             
 
                                                             
-                                                            <div class="form-group kun mt-4">
-                                                                <input type="text" name="pj_project" id="pj_project" class="form-control" placeholder="Penanggung Jawab Project" autofocus>
+                                                            <div class="form-group kun mt-4"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Masukkan Nama Pemilik/Penanggung Jawab Project">
+                                                                <input type="text" name="pj_project" id="pj_project" class="form-control" placeholder="Penanggung Jawab Project"
+                                                                data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Masukkan Nama Pemilik/Penanggung Jawab Project">
                                                             </div>
                                                             
 
                                                             
-                                                            <div class="form-group kun">
-                                                                <input type="tel" name="telp_pj_project" id="telp_pj_project" class="form-control" placeholder="No. Telp.">
+                                                            <div class="form-group kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Masukkan Nomor Telepon Pemilik/Penanggung Jawab Project yang dapat dihubungi">
+                                                                <input type="tel" name="telp_pj_project" id="telp_pj_project" class="form-control" placeholder="No. Telp."
+                                                                data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Masukkan Nomor Telepon Pemilik/Penanggung Jawab Project yang dapat dihubungi">
                                                             </div>
                                                             
 
@@ -252,20 +287,20 @@
                                                             
 
                                                             
-
-                                                            
-                                                            <div class="form-group kun mt-4 mb-1">
+                                                            <div data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Pilih Lokasi Pekerjaan">
+                                                              
+                                                              <div class="form-group kun mt-4 mb-1">
                                                                 <input type="radio" name="lokasi" id="ciawi" value="Ciawi">
                                                                 <label for="ciawi">Ciawi</label>
-                                                            </div>
-                                                            
+                                                              </div>
+                                                              
 
-                                                            <div class="form-group kun">
+                                                              <div class="form-group kun">
                                                                 <input type="radio" name="lokasi" id="cibitung" value="Cibitung">
                                                                 <label for="cibitung">Cibitung</label>
-                                                            </div>
-
+                                                              </div>
                                                             
+                                                            </div>
 
                                                             
                                                             <div class="mt-5">
@@ -308,14 +343,18 @@
                                                             
 
                                                             
-                                                            <div class="form-group mt-3 kun">
-                                                                <textarea name="deskripsi" id="desc_project" class="form-control input-md"  rows="10" placeholder="Deskripsi Project" autofocus></textarea>
+                                                            <div class="form-group mt-3 kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Masukkan Deskripsi Project/Maintenance yang akan dikerjakan">
+                                                                <textarea name="deskripsi" id="desc_project" class="form-control input-md"  rows="10" placeholder="Deskripsi Project"
+                                                                data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Masukkan Deskripsi Project/Maintenance yang akan dikerjakan"></textarea>
                                                             </div>
                                                             
 
                                                             
-                                                            <div class="form-group kun">
-                                                                <input type="text" name="area" id="lokasi_project" placeholder="Area Project" class="form-control inpput-md">
+                                                            <div class="form-group kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Masukkan Lokasi/Area Pekerjaan">
+                                                                <input type="text" name="area" id="lokasi_project" placeholder="Area Project" class="form-control inpput-md"
+                                                                data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Masukkan Lokasi/Area Pekerjaan">
                                                             </div>
                                                             
 
@@ -368,14 +407,16 @@
                                                             
                                                             <div class="form-group kun mt-3">
                                                                 <input type="checkbox" name="area_gmp" id="area_gmp" value="Ya">
-                                                                <label for="area_gmp">Bekerja Pada Area GMP</label>
+                                                                <label for="area_gmp"
+                                                                data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Check Option jika Bekerja pada Area GMP (Abaikan jika tidak)">Bekerja Pada Area GMP</label>
                                                                 <br>
-                                                                <small>*Jangan dicheck/Abaikan jika tidak bekerja pada area GMP</small>
+                                                                <small>*Jangan dicheck/Abaikan jika tidak bekerja pada area GMP (Good Manufacturing Practice)</small>
                                                             </div>
                                                             
 
                                                             
-                                                            <div class="form-group" id="gmp">
+                                                            <div class="form-group" id="gmp"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Masukkan Alat dan Barang yang akan disimpan, tekan[+] untuk menambah field, [-] untuk menghapus field">
 
                                                                 <div class="input-group mb-2 kun" id="gmp_template">
                                                                     <input type="text" name="brg_yang_disimpan[]" id="barang" class="form-control" placeholder="Alat dan Barang yang disimpan">
@@ -388,16 +429,15 @@
 
                                                                 <div id="gmp_noforms_template"></div>
 
-                                                                <small><kbd>Click <span class="fa fa-plus"></span> to Add fields</kbd></small><br>
-                                                                <small><kbd>Click <span class="fa fa-minus"></span> to Remove fields</kbd></small>
-
                                                             </div>
 
                                                             
 
                                                             
-                                                            <div class="form-group kun">
-                                                                <input type="text" name="lokasi_gudang" id="lokasi_gudang" class="form-control" placeholder="Lokasi Gudang Penyimpanan">
+                                                            <div class="form-group kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Masukkan Lokasi Gudang Penyimpanan Alat dan Barang">
+                                                                <input type="text" name="lokasi_gudang" id="lokasi_gudang" class="form-control" placeholder="Lokasi Gudang Penyimpanan"
+                                                                data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Masukkan Lokasi Gudang Penyimpanan Alat dan Barang">
                                                             </div>
                                                             
 
@@ -440,6 +480,7 @@
                                                             <div class="mt-4 mb-2">
                                                                 Pekerjaan Berbahaya
                                                             </div>
+                                                            <div data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Pilih Jenis Pekerjaan Berbahaya(Abaikan jika tidak termasuk Pekerjaan Berbahaya)">
 
                                                             <div id="check-ipb">
                                                               
@@ -469,11 +510,13 @@
                                                               </div>
                                                               
                                                             </div>
+                                                          </div>
                                                         </div>
                                                         
 
                                                         
-                                                        <div class="form-group">
+                                                        <div class="form-group"
+                                                        data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Abaikan Option ini">
                                                             <div class="mt-4 mb-2">
                                                                 Dokumen Lampiran yang dibutuhkan
                                                             </div>
@@ -503,7 +546,8 @@
                                                             <div class="mt-4 mb-2">
                                                                 Kebutuhan Utility dan lainnya
                                                             </div>
-                                                            <div class="row kun">
+                                                            <div class="row kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Check Option jika memerlukan Kebutuhan utility berupa Air (Harap Catat Nama, Departement, Email, dan Nomor Telepon Penanggung Jawab)">
                                                                 <div class="col-2">
                                                                     <input type="checkbox" name="utility[]" id="air" value="Air">
                                                                     <label for="air">Air</label>
@@ -531,7 +575,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="row kun">
+                                                            <div class="row kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Check Option jika memerlukan Kebutuhan utility berupa Angin (Harap Catat Nama, Departement, Email, dan Nomor Telepon Penanggung Jawab)">
                                                                 <div class="col-2">
                                                                     <input type="checkbox" name="utility[]" id="angin" value="Angin">
                                                                     <label for="angin">Angin</label>
@@ -557,7 +602,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="row kun">
+                                                            <div class="row kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Check Option jika memerlukan Kebutuhan utility berupa Listrik (Harap Catat Nama, Departement, Email, dan Nomor Telepon Penanggung Jawab)">
                                                                 <div class="col-2">
                                                                     <input type="checkbox" name="utility[]" id="listrik" value="Listrik">
                                                                     <label for="listrik">Listrik</label>
@@ -583,7 +629,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="row kun">
+                                                            <div class="row kun"
+                                                            data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Check Option jika memerlukan Kebutuhan utility berupa Steam/Uap (Harap Catat Nama, Departement, Email, dan Nomor Telepon Penanggung Jawab)">
                                                                 <div class="col-2">
                                                                     <input type="checkbox" name="utility[]" id="steam" value="Steam">
                                                                     <label for="steam">Steam</label>
@@ -613,7 +660,8 @@
                                                         
 
                                                         
-                                                        <div class="form-group">
+                                                        <div class="form-group"
+                                                        data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Pilih Jenis Sistem yang akan terganggu, pilih lainnya jika tidak tercantum">
                                                             <div class="mt-4 mb-2">
                                                                 Sistem yang akan terganggu
                                                             </div>
@@ -743,8 +791,6 @@
     <!-- Content End Here -->
 
 
-<script src="/js/jquery.js"></script>
-</script>
 
 <script src="/js/jquery.sheepItPlugin.js"></script>
 
@@ -754,6 +800,9 @@
 <script>
 
     $(document).ready(function () {
+
+      // popovers Initialization
+      $('[data-toggle="popover"]').popover();
 
         $('#tanggal_mulai').datepicker({
             showAnim : "fadeIn",

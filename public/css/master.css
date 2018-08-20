@@ -11,8 +11,6 @@ textarea{
 
 }
 
-
-
 .next:hover{
   cursor: pointer;
 }
@@ -28,12 +26,12 @@ textarea{
 }
 
 .box{
-  z-index: -1; 
+  z-index: -1;
   background-color: #fff;
   margin-top: 30%;
   padding: 0;
   box-shadow: #1e1e1e 0px 1px 3px ;
-  min-height: 510px;  
+  min-height: 510px;
 }
 
 .table > thead > tr > th {
@@ -42,14 +40,14 @@ textarea{
 
 
 .jsabox{
-  z-index: -1; 
+  z-index: -1;
   background-color: #fff;
   margin: 0;
   margin-top:15%;
   margin-bottom:15%;
   padding: 0;
   box-shadow: #1e1e1e 0px 1px 3px ;
-  min-height: 510px;  
+  min-height: 510px;
 }
 
 @media only screen and (max-width: 1366px) {
@@ -85,7 +83,7 @@ textarea{
   height: auto;
   margin-bottom: 30%;
 }
-.jsaback{ 
+.jsaback{
   background-color: #3867d6;
   height: 300px;
 }

@@ -31,7 +31,7 @@ class UtilityTableSeeder extends Seeder
       $listrik = new utility;
       $listrik->jenis       = 'Listrik';
       $listrik->name        = 'Eko';
-      $listrik->departement = 'PPA';
+      $listrik->departement = 'PSA';
       $listrik->email       = 'eko@gmail.com';
       $listrik->telp        = '08983201224';
       $listrik->save();

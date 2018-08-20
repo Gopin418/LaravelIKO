@@ -14,7 +14,7 @@ class emergency extends Model
         'lokasi'
     ];
 
-    public function pengantar(){
-        return $this->belongTo('App\pengantar');
+    public function IKO() {
+      return $this->belongsTo(IKO::class);
     }
 }

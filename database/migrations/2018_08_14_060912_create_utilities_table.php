@@ -17,10 +17,14 @@ class CreateUtilitiesTable extends Migration
             $table->increments('id');
             $table->enum('jenis', ['Air', 'Angin', 'Listrik', 'Steam']);
             $table->string('name');
-            $table->string('departement');
+            $table->string('departement')
+            ->references('departement')
+            ->on('departements')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->string('email');
             $table->string('telp');
-        });
+          });
     }
 
     /**
