@@ -5,9 +5,10 @@
   <img src="https://getbootstrap.com/docs/4.1/assets/img/bootstrap-stack.png" width="75">
 </p>
 
+
 ## About IKO
 
-Aplikasi ini dibangun diatas Framework Laravel 5.6 dan Bootstrap 4
+Aplikasi Perizinan Kontraktor yang dibangun diatas Framework Laravel 5.6 dan Bootstrap 4
 
 - Admin Dashboard dengan 2 Role user
 - Form IKO yang dinamis
@@ -15,13 +16,12 @@ Aplikasi ini dibangun diatas Framework Laravel 5.6 dan Bootstrap 4
 - Simple Design
 - Clean Code
 
+
 ## Bahasa yang Digunakan
 
-Bahasa pemrograman yang digunakan untuk web ini berupa :
 - PHP
-- HTML
-- CSS
 - jQuery
+
 
 ## Getting Started
 
